@@ -85,10 +85,14 @@ $(function() {
             let food_title = data.hits[num].recipe.label;
             let food_lines = data.hits[num].recipe.ingredientLines;
             let meal_lines = $('.meal_lines1');
+            let li = document.createElement('li');
+            
+
+            
 
 
             food_lines.forEach((food_line) => {
-                let li = document.createElement('li');
+                // let li = document.createElement('li');
                 li.textContent = food_line;
                 meal_lines.append(li);
             });
@@ -97,6 +101,7 @@ $(function() {
            
             $('.img-box1 img').attr('src', food_img)
             $('.meal-title1').text(food_title)
+
 
             console.log(data)
             console.log(food_img)
